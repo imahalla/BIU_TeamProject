@@ -6,11 +6,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // sh 'pwd'
-                // sh 'cd frontend && docker build -t israelma/red_project_front:v1 .'
-                // sh 'cd ..'
-                // sh 'cd server && docker build -t israelma/red_project_server:v1 .'
-                // sh 'cd ..'
+                sh 'docker build -t israelma/red_project_front:v1 ./frontend'
+                sh 'docker build -t israelma/red_project_server:v1 ./server'
                 sh 'docker images'
             }
         }
@@ -35,8 +32,8 @@ pipeline {
         }
         stage('Push to DockerHub') {
             steps {
-                 sh 'docker push israelma/red_project_front:v1'
-                 sh 'docker push israelma/red_project_server:v1'
+                sh 'docker push israelma/red_project_front:v1'
+                sh 'docker push israelma/red_project_server:v1'
             }
         }
         stage('Remove images') {
