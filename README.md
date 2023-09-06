@@ -27,10 +27,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
    ```
 
-4. Build 2 docker files one for the servert the other for the fronend
+4. Build 2 docker files one for the server the other for the fronend
 
 5. build a ci pipeline in jenkins to serve the application run it and and run the tests using pytest 
 
 6. using jenkins build a terraform cd to build 2 ec2 instances in aws  and run the the first docker image into it and the other docker image to the second application
 
-## make sure that all the vpc are confiured and works 
+## make sure that all the vpc are configured and works 
