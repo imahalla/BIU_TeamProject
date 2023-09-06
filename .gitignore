@@ -1,4 +1,4 @@
 *.tfvars
 .terraform.lock.hcl
-.terraform-provider-aws_v5.15.0_x5
+*.terraform-provider*
 *.tfstate
